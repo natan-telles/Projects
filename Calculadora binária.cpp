@@ -4,7 +4,7 @@
 #define MAX_BINARY_DIGITS 20
 
 int main() {
-    char binary[MAX_BINARY_DIGITS + 1]; // Vetor para armazenar o n˙mero bin·rio (limite m·ximo + caractere nulo)
+    char binary[MAX_BINARY_DIGITS + 1]; // Vetor para armazenar o n√∫mero bin√°rio (limite m√°ximo + caractere nulo)
     int funcao = 0;
     int i, retorno, retorno2, retorno3;
     printf("1 = decimal para binario\n2 = binario para decimal\n3 = sair\n");
@@ -26,7 +26,7 @@ int main() {
                 break;
             }
         }
-		// FunÁ„o 1
+		// Fun√ß√£o 1
         if (funcao == 1) {
         	system ("cls");
         	printf("1 = decimal para binario\n2 = binario para decimal\n3 = sair\n\n");
@@ -57,7 +57,7 @@ int main() {
             }
 
             printf("O numero em binario e: %d\n", binario);
-        // FunÁ„o 2
+        // Fun√ß√£o 2
         } else if (funcao == 2) {
         	system ("cls");
         	printf("1 = decimal para binario\n2 = binario para decimal\n3 = sair\n\n");
@@ -66,7 +66,7 @@ int main() {
             scanf("%20s", binary);
 
 
-            // Verifica cada dÌgito do n˙mero bin·rio
+            // Verifica cada d√≠gito do n√∫mero bin√°rio
             for (i = 0; binary[i] != '\0'; i++) {
                 while (binary[i] != '0' && binary[i] != '1') {
                     printf("Valor invalido. Digite apenas numeros binarios!\n");
