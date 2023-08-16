@@ -32,7 +32,7 @@ main(){
 	printf("\n\n");
 	printf("CLASSIFICACAO FINAL DO CAMPEONATO: \n\n");
 	
-	//classificação
+	//classificaÃ§Ã£o
 	for (x = 0; x < 3; x++) {
         for (y = x + 1; y < 4; y++) {
             if (totalpontos[y] > totalpontos[x]) {
@@ -51,9 +51,9 @@ main(){
 			    
             //se o total entre dois times for igual
             if(totalpontos[y] == totalpontos[x]){
-				//verfica quem pontuou melhor no 2º turno
+				//verfica quem pontuou melhor no 2Âº turno
     			if(pontosturno[y][1] > pontosturno[x][1]){
-    				//troca os times de classificação
+    				//troca os times de classificaÃ§Ã£o
         			int temp_pontos = totalpontos[x];
         			char temp_time[20];
         			strcpy(temp_time, times[x]);
@@ -64,10 +64,10 @@ main(){
 			        totalpontos[y] = temp_pontos;
 			        strcpy(times[y], temp_time);
 			        
-			        //se mesmo assim for igual, verifica quem pontuou melhor no 1º turno
+			        //se mesmo assim for igual, verifica quem pontuou melhor no 1Âº turno
     			} else if(pontosturno[y][1] == pontosturno[x][1]){
 	        		if(pontosturno[y][0] > pontosturno[x][0]){
-	        			//se for igual no 2º, porém, maior no 1º, ele realiza a troca também
+	        			//se for igual no 2Âº, porÃ©m, maior no 1Âº, ele realiza a troca tambÃ©m
 	        			
 			           	int temp_pontos = totalpontos[x];
 			            char temp_time[20];
@@ -84,7 +84,7 @@ main(){
         }
     }
     
-    // Preencher a classificação com os times ordenados
+    // Preencher a classificaÃ§Ã£o com os times ordenados
     for (x = 0; x < 4; x++) {
         strcpy(classificacao[x], times[x]);
         if(x==0){
