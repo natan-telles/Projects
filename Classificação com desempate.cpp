@@ -6,7 +6,7 @@ int x,y,turno = 1;
 char campeao[20], vicecampeao[20], piortime[20];
 
 void  trocar_posicao(){
-	int temp_pontos = totalpontos[x];
+    int temp_pontos = totalpontos[x];
     char temp_time[20];
     strcpy(temp_time, times[x]);
 
@@ -14,7 +14,7 @@ void  trocar_posicao(){
     strcpy(times[x], times[y]);
 
     totalpontos[y] = temp_pontos;
-    strcpy(times[y], temp_time);
+    strcpy(times[y], temp_time);   
 }
 
 main(){	
@@ -47,26 +47,18 @@ main(){
 	
 	//classificação
 	for (x = 0; x < 3; x++) {
-        for (y = x + 1; y < 4; y++) {
-            if (totalpontos[y] > totalpontos[x]) {
-                trocar_posicao();
-            }   
-			    
-            //desempate pelo 2º turno     	    
-            if(totalpontos[y] == totalpontos[x]){
-
-    			if(pontosturno[y][1] > pontosturno[x][1]){
-        			trocar_posicao();
-			        
-				//se mesmo assim for igual, verifica quem pontuou melhor no 1º turno
-    			} else if(pontosturno[y][1] == pontosturno[x][1]){
-	        		if(pontosturno[y][0] > pontosturno[x][0]){
-			           	trocar_posicao();
-	        		}
+        	for (y = x + 1; y < 4; y++) {
+            		if (totalpontos[y] > totalpontos[x]) {
+                		trocar_posicao();
+            		}   			    
+            		//desempate pelo 2º turno     	    
+            		if(totalpontos[y] == totalpontos[x]){
+    				if(pontosturno[y][1] > pontosturno[x][1]){
+        				trocar_posicao();
+    				} 
     			}
-			}		
-        }
-    }
+		}
+    	}
     
     // Preencher a classificação com os times ordenados
     for (x = 0; x < 4; x++) {
